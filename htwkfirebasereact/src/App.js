@@ -6,7 +6,7 @@ import {TodoForm} from "./TodoForm";
 const App = () => {
     const [todos, setTodos] = React.useState([
         {
-            text: "Learn about React",
+            text: "Learn about kjdjljadb",
             isCompleted: false
         },
         {
