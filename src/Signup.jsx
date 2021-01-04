@@ -19,19 +19,12 @@ export const Signup = () => {
    }, []);
 
    const createUser = () => {
-      auth.createUserWithEmailAndPassword(email,password).then((user) => {
-         console.log(user)
-      }).catch(e=> console.log(e))
+      auth.createUserWithEmailAndPassword(email,password).catch(e=> console.log(e))
    }
 
    const signIn =()=> {
-      auth.signInWithEmailAndPassword(email,password).then((user)=>
-      {
-         history.push(`/todo-list/${user.user.uid}`)
-      }).catch(e=>console.log(e))
+      auth.signInWithEmailAndPassword(email,password).catch(e=>console.log(e))
    }
-
-   console.log({email,password});
 
    return(
    <div>
@@ -42,8 +35,7 @@ export const Signup = () => {
       <input type="password" value={password} onChange={(e)=> {
          setPassword(e.target.value)
       }} />
-      <button onClick={createUser}>Neu anmelden</button>
-
+      <button onClick={createUser}>Registrieren</button>
       <button onClick={signIn}>Anmelden</button>
    </div>
    )

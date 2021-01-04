@@ -19,17 +19,18 @@ export const TodoForm = ({ addTodo }) => {
         }).catch(e=>console.log(e))
     }
 
-    return (<>
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                className="input"
-                value={value}
-                onChange={e => setValue(e.target.value)}
-            />
-            <button type={"submit"}>Sumbit</button>
-        </form>
-    <button onClick={logOut}>Log Out</button>
+    return (
+        <>
+            <form onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    className="input"
+                    value={value}
+                    onChange={e => setValue(e.target.value)}
+                />
+                <button type={"submit"}>Sumbit</button>
+            </form>
+            <button onClick={logOut}>Log Out</button>
         </>
     );
 }

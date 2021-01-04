@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import { BrowserRouter, Route, Switch, Redirect, useHistory} from "react-router-dom";
 import "./App.css";
 import { Signup } from "./Signup";
@@ -6,17 +6,17 @@ import { TodoList } from "./TodoList";
 import firebase from "firebase";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCGYiNbY_uE9wC2DvYi1H2oiivTNYmka1I",
-  authDomain: "htwkfirebase-7cf7f.firebaseapp.com",
-  projectId: "htwkfirebase-7cf7f",
-  storageBucket: "htwkfirebase-7cf7f.appspot.com",
-  messagingSenderId: "822672566104",
-  appId: "1:822672566104:web:4fcca12dcb2ecdfecae72d"
+  apiKey: "AIzaSyBCw3M-AGnMtIDtcGBcNFS43pJ_y07c1Do",
+  authDomain: "htwkfirebase-5a2d7.firebaseapp.com",
+  projectId: "htwkfirebase-5a2d7",
+  storageBucket: "htwkfirebase-5a2d7.appspot.com",
+  messagingSenderId: "908501330455",
+  appId: "1:908501330455:web:aa484ae57da8d1f122ca52"
 };
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
 
-console.log(firebase.apps.length)
+if (firebase.apps.length < 1) {
+  firebase.initializeApp(firebaseConfig);
+}
 
 const App = () => {
 
